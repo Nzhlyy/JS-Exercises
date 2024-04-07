@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Grade Remarks</title>
+</head>
+<body>
+    <a href="index.html">
+        <h1><span><i class='bx bx-home-alt-2'></i>Home</span></h1>
+    </a>
+    <h2>Grade Checker</h2>
+    <form id="gradeForm">
+        <label for="grade">Enter Grade:</label>
+        <input type="number" id="grade" name="grade" min="0" max="100">
+        <button type="button" onclick="displayRemarks()">Check</button>
+    </form>
+
+    <p id="remark"></p>
+
+<script>
+function displayRemarks() 
+{
+    var grade = document.getElementById("grade").value;
+
+    var remark;
+    if (grade >= 96 && grade <= 100) {
+        remark = "Excellent";
+    } else if (grade >= 90 && grade <= 95) {
+        remark = "Very Satisfactory";
+    } else if (grade >= 84 && grade <= 89) {
+        remark = "Satisfactory";
+    } else if (grade >= 78 && grade <= 83) {
+        remark = "Fairly Satisfactory";
+    } else if (grade >= 75 && grade <= 77) {
+        remark = "Passed";
+    } else if (grade >= 70 && grade <= 74) {
+        remark = "Conditional Failure";
+    } else {
+        remark = "Failed";
+    }
+    document.getElementById("remark").innerHTML = "Remark:" + remark;
+}
+</script>
+
+</body>
+</html>

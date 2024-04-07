@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <title>InputForm</title>
+</head>
+<body>
+  <a href="index.html">
+    <h1><span><i class='bx bx-home-alt-2'></i>Home</span></h1>
+  </a>
+  
+<h1>Enter Your Name</h1>
+
+<form id="nameForm">
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name">
+  <button type="button" onclick="displayName()">Submit</button>
+</form>
+
+<p id="displayName"></p>
+
+<script>
+  function displayName() {
+    var userName = document.getElementById("name").value;
+    document.getElementById("displayName").innerHTML = "Hello, " + userName + "!";
+  }
+</script>
+
+</body>
+</html>

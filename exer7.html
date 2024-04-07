@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Number Checker</title>
+</head>
+<body>
+    <a href="index.html">
+        <h1><span><i class='bx bx-home-alt-2'></i>Home</span></h1>
+    </a>
+    <h2>Number Checker</h2>
+    Number: <input type="number" id="numberInput">
+    <button onclick="checkNumber()">Check</button>
+    <p id="result"></p>
+
+    <script>
+        function checkNumber() {
+            let number = document.getElementById("numberInput").value;
+            let resultMessage = "";
+
+            if (number > 0) {
+                resultMessage += "The number is positive. ";
+            } else if (number < 0) {
+                resultMessage += "The number is negative. ";
+            } else {
+                resultMessage += "The number is zero. ";
+            }
+
+            if (number % 2 === 0) {
+                resultMessage += "It is even.";
+            } else {
+                resultMessage += "It is odd.";
+            }
+
+            document.getElementById("result").innerHTML = resultMessage;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Document</title>
+</head>
+<body>
+    <a href="index.html">
+        <h1><span><i class='bx bx-home-alt-2'></i>Home</span></h1>
+    </a>
+    <h2>For Loop</h2>
+    <script>
+        let id = "";
+
+        for (let u = 0; u < 16; u++) {
+            id += u + "<br>";
+        }
+        document.write(id);
+    </script>
+
+    <h2>Do While Loop</h2>
+    <script>
+        let num = "";
+        let i = 0 ;
+
+        do {
+            num += i + "<br>";
+            i++;
+        } while (i < 16);
+
+        document.write(num);
+    </script>
+
+    <h2>While Loop</h2>
+    <script>
+        let nam = "";
+        let o = 0;
+        while (o < 16) {
+            nam += o + "<br>";
+            o++;
+        }
+
+        document.write(nam);
+    </script>
+</body>
+</html>

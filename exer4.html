@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Document</title>
+</head>
+<body>
+    <a href="index.html">
+        <h1><span><i class='bx bx-home-alt-2'></i>Home</span></h1>
+    </a>
+    <h2>Vowel or Consonant Checker</h2>
+    <form id="LetterForm">
+        <label for="lett">Letter:</label>
+        <input type="text" id="lett" name="lett" maxlength="1">
+        <button type="button" onclick="displayMess()">Submit</button>
+    </form>
+
+    <p id="displayMessage"></p>
+
+<script>
+function displayMess() {
+    var lett = document.getElementById("lett").value; 
+    let message; 
+
+    if (lett === 'a' || lett === 'e' || lett === 'i' || lett === 'o' || lett === 'u') {
+        message = "Vowel";
+    } else if (lett === 'A' || lett === 'E' || lett === 'I' || lett === 'O' || lett === 'U') {
+        message = "Vowel";
+    } else {
+        message = "Consonant"; 
+    }
+
+    document.getElementById("displayMessage").innerHTML = "The letter is " + message + "!";
+}
+</script>
+</body>
+</html>
